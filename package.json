@@ -1,0 +1,29 @@
+{
+  "name": "leaflet-bootstrap",
+  "version": "0.0.1",
+  "description": "Basic leaflet + npm setup",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "watch": "watchify app.js -o public/dist/app-dist.js -dv"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "bootstrap",
+    "leaflet"
+  ],
+  "author": "Jacob Dalton",
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "~0.7.1",
+    "express": "~3.4.7",
+    "superagent": "~0.15.7",
+    "angular": "~1.2.10",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.16.2"
+  }
+}
