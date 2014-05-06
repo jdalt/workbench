@@ -5,7 +5,7 @@ app.use(express.json());
 
 app.use(express.static(__dirname + '/public'));
 
-var port = Number(process.env.PORT || 3003);
+var port = Number(process.env.PORT || 5000);
 app.listen(port);
 
 console.log("Server is listening on port: " + port);
