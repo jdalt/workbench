@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="dist/app-dist.js"></script>
+
+    <style>
+      .home {
+        color: #ff0;
+        background-color: #0f0;
+      }
+      .away {
+        color: #0ff;
+        background-color: #f0f;
+      }
+      .pin-svg {
+        background-image: url(images/flat.svg), none;
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+      }
+      .inline-svg {
+        width: 50px;
+        height: 50px;
+        background-size: 50px 50px;
+        display: inline-block;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .pin {
+        fill: #ff0;
+      }
+
+      .pin-primary {
+        fill: #f00;
+        stroke: #eee;
+      }
+
+      .pin-secondary {
+        fill: #000;
+      }
+    </style>
+  </head>
+  <body ng-app="app">
+    <div ng-controller="trollController"> 
+      <!-- Different SVG Methods -->
+
+      <h1>img</h1>
+      <img class="home" src="images/flat.svg" style="width=50px; height: 50px" />
+      <img class="away" src="images/flat.svg" style="width=50px; height: 50px" />
+
+      <h1>background-image</h1>
+      <div class="pin-svg home"></div>
+      <div class="pin-svg away"></div>
+
+      <h1>Inline</h1>
+      <div class="inline-svg home">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 37.5 54.5" enable-background="new 0 0 37.5 54.5" xml:space="preserve">
+        <path class="pin" d="M18.8,1.7C8.7,1.7,0.5,9.9,0.5,20c0,9.5,13.7,19.7,17.6,32.3c0.1,0.3,0.3,0.5,0.6,0.5c0.3,0,0.5-0.2,0.6-0.5
+        C23.2,39.4,37,29.5,37,20C37,9.9,28.8,1.7,18.8,1.7z M18.8,33.9c-7.9,0-14.3-6.4-14.3-14.3c0-7.9,6.4-14.3,14.3-14.3
+        c7.9,0,14.3,6.4,14.3,14.3C33.1,27.4,26.7,33.9,18.8,33.9z"/>
+        </svg>
+      </div>
+      <div class="inline-svg away">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 37.5 54.5" enable-background="new 0 0 37.5 54.5" xml:space="preserve">
+        <path class="pin" d="M18.8,1.7C8.7,1.7,0.5,9.9,0.5,20c0,9.5,13.7,19.7,17.6,32.3c0.1,0.3,0.3,0.5,0.6,0.5c0.3,0,0.5-0.2,0.6-0.5
+        C23.2,39.4,37,29.5,37,20C37,9.9,28.8,1.7,18.8,1.7z M18.8,33.9c-7.9,0-14.3-6.4-14.3-14.3c0-7.9,6.4-14.3,14.3-14.3
+        c7.9,0,14.3,6.4,14.3,14.3C33.1,27.4,26.7,33.9,18.8,33.9z"/>
+        </svg>
+      </div>
+
+      <h1>Inline More Classes</h1>
+      <div id="clone-host">
+        <div class="inline-svg home logo">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 37.5 54.5" enable-background="new 0 0 37.5 54.5" xml:space="preserve">
+          <path class="pin-primary" d="M18.8,1.7C8.7,1.7,0.5,9.9,0.5,20c0,9.5,13.7,19.7,17.6,32.3c0.1,0.3,0.3,0.5,0.6,0.5c0.3,0,0.5-0.2,0.6-0.5
+          C23.2,39.4,37,29.5,37,20C37,9.9,28.8,1.7,18.8,1.7z M18.8,33.9c-7.9,0-14.3-6.4-14.3-14.3c0-7.9,6.4-14.3,14.3-14.3
+          c7.9,0,14.3,6.4,14.3,14.3C33.1,27.4,26.7,33.9,18.8,33.9z"/>
+          <g>
+          <path class="pin-secondary" d="M14.3,31.3l6.8-23.2h3.2l-6.8,23.2H14.3z"/>
+          </g>
+          </svg>
+        </div>
+        <div class="inline-svg away logo">
+          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 37.5 54.5" enable-background="new 0 0 35 50" xml:space="preserve">
+          <path class="pin-primary" d="M18.8,1.7C8.7,1.7,0.5,9.9,0.5,20c0,9.5,13.7,19.7,17.6,32.3c0.1,0.3,0.3,0.5,0.6,0.5c0.3,0,0.5-0.2,0.6-0.5
+          C23.2,39.4,37,29.5,37,20C37,9.9,28.8,1.7,18.8,1.7z M18.8,33.9c-7.9,0-14.3-6.4-14.3-14.3c0-7.9,6.4-14.3,14.3-14.3
+          c7.9,0,14.3,6.4,14.3,14.3C33.1,27.4,26.7,33.9,18.8,33.9z"/>
+          <g>
+          <path class="pin-secondary" d="M14.3,31.3l6.8-23.2h3.2l-6.8,23.2H14.3z"/>
+          </g>
+          </svg>
+        </div>
+      </div>
+
+      <h1>Cloned Svg</h1>
+      <div id="clone-holder"></div>
+    </div>
+    <script>
+      $(document).ready( function() {
+        for( var i=0; i<100; i++) {
+          $('#clone-host .inline-svg.home.logo').clone().appendTo('#clone-holder');
+
+          setInterval( function() {
+            $('.pin-secondary').css('fill', randColor());
+            $('.pin-primary').css('fill', randColor());
+          }, 500);
+        }
+      });
+
+      function randColor() {
+        return "#" + randHex() + randHex() + randHex() + randHex() + randHex() + randHex();
+      }
+
+      function randHex() {
+        return Math.floor(Math.random() * 16 + .5).toString(16);
+      }
+    </script>
+  </body>
+</html>
